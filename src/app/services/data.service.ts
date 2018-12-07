@@ -469,14 +469,25 @@ export class DataService {
   ];
 
   getTotalNumberOfSkills() {
-    return this.categories
-      .map(category => category.skills)
-      .length;
+    let result = [];
+
+    this.categories
+      .forEach(category => {
+        result = [...result, ...category.skills];
+      });
+
+    return result.length;
   }
 
   getTotalNumberOfSkillsCompleted() {
-    return this.categories
-      .map(category => category.skills);
+    let result = [];
+
+    this.categories
+      .forEach(category => {
+        result = [...result, ...category.skills];
+      });
+
+    return result.filter(cat => cat.completed).length;
   }
 
   getCategories() {

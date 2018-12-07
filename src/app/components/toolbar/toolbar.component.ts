@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,13 +9,20 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private data: DataService) { }
   done = 5;
   total = 50;
   username = this.auth.username;
 
-  ngOnInit() {
+  getTotal() {
+    return this.data.getTotalNumberOfSkills();
   }
+
+  getAcq() {
+    return this.data.getTotalNumberOfSkillsCompleted();
+  }
+
+  ngOnInit() { }
 
   logOut() {
     this.auth.logOut();
