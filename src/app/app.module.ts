@@ -8,19 +8,37 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserComponent } from './components/user/user.component';
+import {MatFormFieldModule, MatInputModule, MatCardModule, MatProgressSpinnerModule} from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    FormsModule
+  ],
+  exports: [
+    MatToolbarModule, 
+    MatButtonModule, 
+    MatCardModule, 
+    MatInputModule, 
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
