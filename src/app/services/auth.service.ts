@@ -18,4 +18,10 @@ export class AuthService {
       ? this.router.navigate(['admin'])
       : this.router.navigate(['categories']);
   }
+
+  logOut() {
+    console.log('logout');
+    this.isLoggedIn = false;
+    this.router.navigate(['login']);
+  }
 }

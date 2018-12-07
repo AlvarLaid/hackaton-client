@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" style="padding: 0 !important;">
   <img src="../../../assets/logo.png" alt="">
-  <span>Hello, Name</span>
+  <span>Hello, {{username}}</span>
   <span class="spacer"></span>
   <span style="padding-right: 24px;"> Completed {{done}} / {{total}} </span>
-  <button mat-raised-button color="accent" style="margin-right: 16px;">Log out</button>
+  <button mat-raised-button (click)="logout()" color="accent" style="margin-right: 16px;">Log out</button>
 </mat-toolbar>

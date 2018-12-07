@@ -1,5 +1,6 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div [ngClass]="{'logged-out': !isLoggedIn()}">
   <app-toolbar *ngIf="isLoggedIn()"></app-toolbar>
+  <app-friends *ngIf="isLoggedIn()"></app-friends>
   <router-outlet></router-outlet>
 </div>
+

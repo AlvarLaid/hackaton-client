@@ -21,6 +21,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './components/user/user.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { FriendsComponent } from './components/friends/friends.component';
 
 
 
@@ -35,6 +36,7 @@ import { AdminComponent } from './components/admin/admin.component';
     SkillsComponent,
     UserComponent,
     AdminComponent
+    FriendsComponent
   ],
   imports: [
     BrowserModule,
