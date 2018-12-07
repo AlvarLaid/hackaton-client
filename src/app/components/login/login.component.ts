@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {Router} from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -10,18 +11,17 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
-username: string;
-password: string;
+  constructor(private auth: AuthService) { }
+  username: string;
+  password: string;
+  showSpinner;
 
   ngOnInit() {
+    console.log('i am loggin in');
   }
-  login() : void {
-    if(this.username == 'admin' && this.password == 'admin'){
-      this.router.navigate(["user"]);
-     }else {
-       alert("Invalid credentials");
-     }
+
+  login(): void {
+    this.auth.logIn(this.username);
   }
 
 }
