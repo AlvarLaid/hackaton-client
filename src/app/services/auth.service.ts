@@ -12,9 +12,10 @@ export class AuthService {
   username;
 
   logIn(username) {
-    console.log('login', username);
     this.isLoggedIn = true;
     this.username = username;
-    this.router.navigate(['categories']);
+    this.username === 'admin'
+      ? this.router.navigate(['admin'])
+      : this.router.navigate(['categories']);
   }
 }
