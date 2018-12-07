@@ -11,3 +11,36 @@
 .example-card {
     width: 100%;
 }
+
+.responsive {
+    width: 10%;
+    height: auto;
+  }
+  
+  .object {
+    position: absolute;
+  }
+  .van {
+    top: 45%;
+    left: 5%;
+  }
+  
+  .van2 {
+    top: 45%;
+    left: 20%;
+  }
+  
+  #axis:hover .move-right{
+    transform: translate(500px,0);
+    -webkit-transform: translate(500px,0); /** Chrome & Safari **/
+    -o-transform: translate(500px,0); /** Opera **/
+    -moz-transform: translate(500px,0); /** Firefox **/
+  }
+  
+  .object {
+    position: absolute;
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 2s ease-in-out; /** Firefox **/
+    -o-transition: all 2s ease-in-out; /** Opera **/
+  }
