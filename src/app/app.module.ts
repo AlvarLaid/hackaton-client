@@ -25,6 +25,8 @@ import { FriendsComponent } from './components/friends/friends.component';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -52,6 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatIconModule,
     MatCardModule,
+    MatSelectModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatCheckboxModule,

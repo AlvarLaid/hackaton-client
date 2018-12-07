@@ -17,7 +17,10 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
     this.categories = this.data.categories;
-    this.http.get('https://xmas-hackathon.herokuapp.com/user/0').subscribe((val: string) => console.log(JSON.parse(val)));
+    this.http.get('https://xmas-hackathon.herokuapp.com/user/0').subscribe((val: any) => {
+      console.log(val);
+      console.log(JSON.parse(val.data));
+    });
   }
 
   click() {

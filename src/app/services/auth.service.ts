@@ -15,7 +15,7 @@ export class AuthService {
     this.isLoggedIn = true;
     this.username = username;
     this.username === 'admin'
-      ? this.router.navigate(['categories'])
+      ? this.router.navigate(['admin'])
       : this.router.navigate(['categories']);
   }
 
