@@ -15,6 +15,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SkillsComponent } from './components/skills/skills.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import {MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { UserComponent } from './components/user/user.component';
+
 
 
 
@@ -25,18 +31,31 @@ import { MatIconModule } from '@angular/material/icon';
     LoginComponent,
     CategoriesComponent,
     ListItemComponent,
-    SkillsComponent
+    SkillsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatProgressBarModule,
+
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatIconModule,
-    MatToolbarModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatCheckboxModule,
+    FormsModule
+  ],
+  exports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
