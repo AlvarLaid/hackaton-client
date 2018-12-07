@@ -7,6 +7,8 @@ export class DataService {
 
   constructor() { }
 
+  completedAssignments = [];
+
   categories = [
     {
       categoryName: 'JavaScript',
@@ -64,7 +66,7 @@ export class DataService {
               'https://www.youtube.com/watch?v=LaIAHOSKHCQ'
             ]
           },
-          assignment: 'To be the most awesomest JavaScripter ever, simply be awesome'
+          assignment: 'OMG! What more do you want from us???'
         },
       ]
     },

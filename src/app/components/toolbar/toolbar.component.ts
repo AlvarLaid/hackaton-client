@@ -10,8 +10,6 @@ import { DataService } from '../../services/data.service';
 export class ToolbarComponent implements OnInit {
 
   constructor(private auth: AuthService, private data: DataService) { }
-  done = 5;
-  total = 50;
   username = this.auth.username;
 
   getTotal() {

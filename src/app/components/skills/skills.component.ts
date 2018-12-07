@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private data: DataService) { }
   @Input() skill;
   expanded;
 
@@ -16,6 +17,10 @@ export class SkillsComponent implements OnInit {
 
   isAdmin() {
     return this.auth.username === 'admin';
+  }
+
+  checked(assignemnt) {
+    this.data.completedAssignments.push(assignemnt);
   }
 
   expand() {

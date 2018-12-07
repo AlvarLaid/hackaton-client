@@ -19,10 +19,10 @@
       </div>
 
       <h3>Assignment</h3>
-      <p> <mat-checkbox *ngIf="!isAdmin()"></mat-checkbox> {{skill.assignment}}</p>
+      <p> <mat-checkbox *ngIf="!isAdmin()" (change)="checked(skill.assignment)"></mat-checkbox> {{skill.assignment}}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <div style="display: flex; justify-content: flex-end; width: 100%;">
+    <mat-card-actions style="padding-left: 16px; padding-bottom: 16px;">
+      <div >
         <button mat-raised-button color="accent" (click)="expand()">{{expanded ? 'Close' : 'Learning materials'}}</button>
         <button mat-raised-button color="accent" (click)="completed()" *ngIf="isAdmin()">Completed</button>
       </div>
