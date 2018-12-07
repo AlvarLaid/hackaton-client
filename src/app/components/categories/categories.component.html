@@ -1,0 +1,18 @@
+<div class="container" *ngIf="!clicked">
+  <app-list-item 
+    *ngFor="let category of categories" 
+    [categoryName]="category.categoryName"
+    [totalSkills]="category.skillsTotal"
+    [skillsAcquired]="category.skillsAcquired"
+    (click)="click()">
+  </app-list-item>
+</div>
+
+<ng-container *ngIf="clicked">
+  <div style="display: flex; justify-content: flex-end;">
+    <button mat-icon-button (click)="click()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <app-skills *ngFor="let skill of skills" [skill]="skill"></app-skills>
+</ng-container>

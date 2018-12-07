@@ -1,0 +1,12 @@
+<div [class.mat-elevation-z4]="true" class="list-item">
+  <div class="hackaton-wrapper">
+    <div class="wrapper">
+      <span class="name">{{categoryName}}</span>
+      <div class="hackaton-wrapper-2">
+        <span class="skills">{{skillsAcquired}} / {{totalSkills}}</span>
+        <mat-checkbox *ngIf="hasCheckbox" class="checkbox"></mat-checkbox>
+      </div>
+    </div>
+    <mat-progress-bar mode="determinate" value={{getCompletionPercentage()}}></mat-progress-bar>
+  </div>
+</div>
