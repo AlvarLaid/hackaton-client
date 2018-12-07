@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   showSpinner;
 
   ngOnInit() {
-    console.log('i am loggin in');
   }
 
   login(): void {

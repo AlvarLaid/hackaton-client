@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
-  <span>Hello, Name</span>
+  <span>Hello, {{username}}</span>
   <span class="spacer"></span>
   <span style="padding-right: 24px;"> Completed {{done}} / {{total}} </span>
-  <button mat-raised-button color="accent">Log out</button>
+  <button mat-raised-button (click)="logout()" color="accent">Log out</button>
 </mat-toolbar>

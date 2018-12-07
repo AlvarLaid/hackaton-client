@@ -17,4 +17,10 @@ export class AuthService {
     this.username = username;
     this.router.navigate(['categories']);
   }
+
+  logOut() {
+    console.log('logout');
+    this.isLoggedIn = false;
+    this.router.navigate(['login']);
+  }
 }
