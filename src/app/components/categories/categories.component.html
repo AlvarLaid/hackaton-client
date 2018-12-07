@@ -2,8 +2,8 @@
   <app-list-item 
     *ngFor="let category of categories" 
     [categoryName]="category.categoryName"
-    [totalSkills]="category.skillsTotal"
-    [skillsAcquired]="category.skillsAcquired"
+    [totalSkills]="category.skills.length"
+    [skillsAcquired]="calculateAcqSkills(category.skills)"
     (click)="click()">
   </app-list-item>
 </div>
@@ -14,5 +14,5 @@
       <mat-icon>close</mat-icon>
     </button>
   </div>
-  <app-skills *ngFor="let skill of skills" [skill]="skill"></app-skills>
+  <app-skills *ngFor="let skill of categories[0].skills" [skill]="skill"></app-skills>
 </ng-container>

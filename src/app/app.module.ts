@@ -22,6 +22,9 @@ import { FormsModule } from '@angular/forms';
 import { UserComponent } from './components/user/user.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { FriendsComponent } from './components/friends/friends.component';
+import { DataService } from './services/data.service';
+import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -35,7 +38,7 @@ import { FriendsComponent } from './components/friends/friends.component';
     ListItemComponent,
     SkillsComponent,
     UserComponent,
-    AdminComponent
+    AdminComponent,
     FriendsComponent
   ],
   imports: [
@@ -43,7 +46,7 @@ import { FriendsComponent } from './components/friends/friends.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-
+    HttpClientModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
@@ -61,7 +64,7 @@ import { FriendsComponent } from './components/friends/friends.component';
     MatInputModule,
     MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [DataService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

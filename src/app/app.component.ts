@@ -12,4 +12,8 @@ export class AppComponent {
   isLoggedIn() {
     return this.auth.isLoggedIn;
   }
+
+  notAdmin() {
+    return this.auth.username !== 'admin';
+  }
 }

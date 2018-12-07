@@ -2,8 +2,7 @@
     flex: 1 1 auto;
   }
 .container {
-    margin:16px;
-    width: 100%;
+    margin: 16px;
 }
 
 .random {
@@ -11,8 +10,13 @@
     justify-content: space-between;
     align-items: center;
     color: #009639;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5;
+
 }
 
 .strikethrough {
     text-decoration: line-through;
   }
+  

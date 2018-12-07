@@ -8,16 +8,15 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor(private auth: AuthService) { 
-
-  }
+  constructor(private auth: AuthService) { }
   done = 5;
   total = 50;
   username = this.auth.username;
 
   ngOnInit() {
   }
-  logout() {
+
+  logOut() {
     this.auth.logOut();
   }
 
